@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<style>
+    table#tb01 {
+        width: 100%;
+    }
+    table#tb01 th{
+        background-color:cadetblue;
+    }
+
+</style>
+    <body>
+        <link rel="stylesheet" href="styles.css">
+        <h1>
+            <a href="/">Home</a>
+            <a href="/addmany">List Tasks</a>
+            <a href="/addtask">New Task</a>
+            <a href="/deleteall">Delete All</a>
+            <a href="/deleteone">Delete One</a>
+            <a href="/showtask">List Tasks</a>
+            <a href="/update">Update State</a>
+        </h1>
+
+        <table id ="tb01">
+            <tr>
+                <th>ID</th>
+                <th>Task Name</th>
+                <th>Due Date</th>
+                <th>Task Status</th>
+                <th>Task Description</th>
+            </tr>
+            <tr>
+                <% for (let i=0; i<myData.length;++i) {%>
+                    <tr>
+                        <td> <%= myData[i].__id %></td>
+                        <td> <%= myData[i].taskname %> </td>
+                        <td> <%= myData[i].assignedto %> </td>
+                        <td> <%= myData[i].taskdue %> </td>
+                        <td> <%= myData[i].status %> </td>
+                        <td> <%= myData[i].taskdesc %> </td>
+                    </tr>
+                <% } %>
+            </tr>
+
+        </table>
+
+    </body>
+</html>

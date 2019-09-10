@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>
+            <a href="/">Home</a>
+            <a href="/addtask">New Task</a>
+            <a href="/deleteall">Delete All</a>
+            <a href="/update">Update State</a>
+            <a href="/addmany">Insert Many</a>
+            <a href="/showtask">List Tasks</a>
+        </h1>
+
+        <form action='/delete_by_id' method="POST">
+                ID: <input type="text" name="id" placeholder="Enter your ID">
+                <button type="submit" onclick="javascript: form.action='/delete_by_id';">Delete</button>
+            </form>
+            </body>
+            </html>

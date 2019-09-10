@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>
+        <a href="/">Home</a>
+        <a href="/addnew">New Task</a>
+        <a href="/deleteall">Delete All</a>
+        <a href="/deleteone">Delete One</a>
+        <a href="/showtask">List Tasks</a>
+        <a href="/update">Update State</a>
+        </h1>
+
+        <form action="/addmany" method="POST">
+            Task Name: <input type='text' name="taskname"> <br/>
+            Assign To: <input type='text' name="assignedto"> <br/>
+            Task Due: <input type='date' name="taskdue"> <br/>
+            Task Status: <select name='status'>
+                            <option value = "InProgress">InProgress</option>
+                            <option value = "Complete">Complete</option>
+                        </select>
+                        <br>
+            Task Desc: <input type="text" name='taskdesc'> <br/>
+            Count: <input type="number" name='count'> <br/>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
